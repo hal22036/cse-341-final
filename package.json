@@ -1,11 +1,12 @@
 {
   "name": "cse-341-final",
   "version": "1.0.0",
-  "description": "",
+  "description": "Meal Ideas Final Project",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "nodemon": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +26,27 @@
     "swagger-ui-dist": "^5.9.0",
     "swagger-ui-express": "^5.0.0",
     "validatorjs": "^3.22.1"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Ammon Jones",
+      "email": "wjssaan@gmail.com"
+    },
+    {
+      "name": "Cassie Smith",
+      "email": "smithncassie22@gmail.com"
+    },
+    {
+      "name": "Karol Bracho Yanez",
+      "email": "brachokarol.sud@gmail.com"
+    },
+    {
+      "name": "Alicia Thompson",
+      "email": "peanutbuttersharkface@gmail.com"
+    },
+    {
+      "name": "JoJo Johnson",
+      "email": "joh20123@byui.edu"
+    }
+  ]
 }

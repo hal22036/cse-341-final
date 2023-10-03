@@ -2,12 +2,12 @@ const validator = require('../helpers/validate');
 
 const saveBreakfast = (req, res, next) => {
     const validationRule = {
-        faculty_id: 'required|string',
-        firstName: 'required|string',
-        lastName: 'required|string',
-        email: 'required|string',
-        subject: 'required|string',
-        yearsTeaching: 'required|string'        
+        breakfast_type: 'required|string',
+        item_1: 'required|string',
+        item_2: 'required|string',
+        item_3: 'required|string',
+        item_4: 'required|string',
+        category: 'required|string'        
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if(!status) {
@@ -24,12 +24,12 @@ const saveBreakfast = (req, res, next) => {
 
 const saveLunch = (req, res, next) => {
     const validationRule = {
-        faculty_id: 'required|string',
-        firstName: 'required|string',
-        lastName: 'required|string',
-        email: 'required|string',
-        subject: 'required|string',
-        yearsTeaching: 'required|string'        
+        lunch_type: 'required|string',
+        item_1: 'required|string',
+        item_2: 'required|string',
+        item_3: 'required|string',
+        item_4: 'required|string',
+        category: 'required|string'         
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if(!status) {
@@ -46,12 +46,12 @@ const saveLunch = (req, res, next) => {
 
 const saveDinner = (req, res, next) => {
     const validationRule = {
-        faculty_id: 'required|string',
-        firstName: 'required|string',
-        lastName: 'required|string',
-        email: 'required|string',
-        subject: 'required|string',
-        yearsTeaching: 'required|string'        
+        dinner_type: 'required|string',
+        item_1: 'required|string',
+        item_2: 'required|string',
+        item_3: 'required|string',
+        item_4: 'required|string',
+        category: 'required|string'         
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if(!status) {
@@ -68,12 +68,14 @@ const saveDinner = (req, res, next) => {
 
 const saveDessert = (req, res, next) => {
     const validationRule = {
-        faculty_id: 'required|string',
-        firstName: 'required|string',
-        lastName: 'required|string',
-        email: 'required|string',
-        subject: 'required|string',
-        yearsTeaching: 'required|string'        
+        dessert_type: 'required|string',
+        item_1: 'required|string',
+        item_2: 'required|string',
+        item_3: 'required|string',
+        item_4: 'required|string',
+        item_5: 'required|string',
+        item_6: 'required|string',
+        category: 'required|string'         
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if(!status) {
