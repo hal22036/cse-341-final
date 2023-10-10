@@ -7,7 +7,7 @@ const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 const cors = require('cors');
 
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app
  .use(bodyParser.json())
@@ -67,7 +67,7 @@ mongodb.initDb((err) => {
         console.log(err);
     }
     else {
-        app.listen(port, () => { console.log(`Database is listening and node is running on port ${port}`)});
+        app.listen(PORT, () => { console.log(`Database is listening and node is running on port ${PORT}`)});
     }
 });
 
