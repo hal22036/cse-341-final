@@ -1,0 +1,26 @@
+[
+ 
+    {
+    "breakfast_type": "Pancakes",
+    "item_1": "2 cups Flour",
+    "item_2": "1 cup Milk",
+    "item_3": "2 Eggs",
+    "item_4": "1 Tablespoon Sugar",
+    "category": "American"
+  },
+  {
+    "breakfast_type": "French Toast",
+    "item_1": "1 loaf of Bread",
+    "item_2": "8 Eggs",
+    "item_3": "1 cup Milk",
+    "item_4": "1 tsp Vanilla",
+    "category": "American"
+  },
+  {
+    "breakfast_type": "German Pancakes",
+    "item_1": "2 cups Milk",
+    "item_2": "6 Eggs",
+    "item_3": "1 cup Flour",
+    "item_4": "1 tsp Vanilla",
+    "category": "American"
+  }]

@@ -1,0 +1,32 @@
+[
+ 
+    {
+    "dessert_type": "Chocolate Chip Cookies",
+    "item_1": "1 cup Butter",
+    "item_2": "2 cups Sugar",
+    "item_3": "2 Eggs",
+    "item_4": "1 tsp Salt",
+    "item_5": "2 1/2 cups Flour",
+    "item_6": "1 cup Chocolate Chips",
+    "category": "American"
+  },
+  {
+    "dessert_type": "Frosted Banana Bars",
+    "item_1": "1 cup Butter",
+    "item_2": "2 cups Sugar",
+    "item_3": "2 Eggs",
+    "item_4": "1 tsp Salt",
+    "item_5": "2 cups Flour",
+    "item_6": "2 cups Bananas",
+    "category": "American"
+  },
+  {
+    "dessert_type": "Texas Sheet Cake",
+    "item_1": "1 cup Butter",
+    "item_2": "2 cups Sugar",
+    "item_3": "2 Eggs",
+    "item_4": "1 tsp Salt",
+    "item_5": "2 cups Flour",
+    "item_6": "1/2 cup Cocoa Powder",
+    "category": "American"
+  }]
