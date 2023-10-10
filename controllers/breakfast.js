@@ -32,8 +32,76 @@ const getAll = async (req, res) => {
     });
   };
 
+  const createBreakfast = async (req, res) => {
+    //#swagger.tags=['breakfast']
+    const breakfast = {
+      breakfast_type: req.body.breakfast_type,
+      item_1: req.body.item_1,
+      item_2: req.body.item_2,
+      item_3: req.body.item_3,
+      item_4: req.body.item_4,
+      category: req.body.category
+    };
+    const response = await mongodb.getDatabase().db().collection('breakfast').insertOne(breakfast);
+    try {
+      response.acknowledged;
+      res.status(204).send();
+    } catch {
+      res.status(500).json(response.error || 'Some error occured while updating the breakfast.');
+    }
+  };
+  
+  const updateBreakfast = async (req, res) => {
+    //#swagger.tags=['breakfast']
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid contact id to update a breakfast.');
+    }
+    const breakfastId = new ObjectId(req.params.id);
+    const breakfast = {
+      breakfast_type: req.body.breakfast_type,
+      item_1: req.body.item_1,
+      item_2: req.body.item_2,
+      item_3: req.body.item_3,
+      item_4: req.body.item_4,
+      category: req.body.category
+    };
+    const response = await mongodb
+      .getDatabase()
+      .db()
+      .collection('breakfast')
+      .replaceOne({ _id: breakfastId }, breakfast);
+    try {
+      response.modifiedCount;
+      res.status(204).send();
+    } catch {
+      res.status(500).json(response.error || 'Some error occured while updating the breakfast.');
+    }
+  };
+  
+  const deleteBreakfast = async (req, res) => {
+    //#swagger.tags=['breakfast']
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid contact id to delete a breakfast.');
+    }
+    const breakfastId = new ObjectId(req.params.id);
+    const response = await mongodb
+      .getDatabase()
+      .db()
+      .collection('breakfast')
+      .deleteOne({ _id: breakfastId });
+    try {
+      response.deleteCount > 0;
+      res.status(204).send();
+    } catch {
+      res.status(500).json(response.error || 'Some error occured while deleting the breakfast.');
+    }
+  };
+
   module.exports = {
     getAll,
-    getSingle
+    getSingle,
+    createBreakfast,
+    updateBreakfast,
+    deleteBreakfast
   };
   
