@@ -1,0 +1,26 @@
+[
+ 
+    {
+    "lunch_type": "Chicken Salad",
+    "item_1": "1Lb Shredded Chicken",
+    "item_2": "1/2 cup Mayo",
+    "item_3": "1 cup cut Grapes",
+    "item_4": "1/4 cup Honey",
+    "category": "American"
+  },
+  {
+    "lunch_type": "Monte Cristo Sandwich",
+    "item_1": "2 Slices White Bread",
+    "item_2": "1 oz Ham Sliced",
+    "Item 3": "1 oz Turkey Sliced",
+    "Item 4": "1 slice American Cheese",
+    "category": "American"
+  },
+  {
+    "lunch_type": "Pesto Pasta",
+    "item_1": "1lb Pasta",
+    "item_2": "8oz Pesto",
+    "item_3": "1/2 lb Cooked Chicken",
+    "item_4": "1 cup Mozzerella Balls",
+    "category": "Italian"
+  }]
