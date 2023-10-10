@@ -1,0 +1,26 @@
+[
+ 
+    {
+    "dinner_type": "Lasagna",
+    "item_1": "Lasagna Noodles",
+    "item_2": "16oz Ricotta Cheese",
+    "item_3": "28oz Pasta Sauce",
+    "item_4": "8oz Parmasan Cheese",
+    "category": "Italian"
+  },
+  {
+    "dinner_type": "Roast",
+    "item_1": "3lb Pork Butt Roast",
+    "item_2": "Carrots",
+    "item_3": "Potatoes",
+    "item_4": "Seasoning Packet",
+    "category": "American"
+  },
+  {
+    "dinner_type": "Tacos",
+    "item_1": "1lb Hamburger",
+    "item_2": "Taco Seasoning",
+    "item_3": "Tortillas",
+    "item_4": "Cheddar Cheese",
+    "category": "Mexican"
+  }]
