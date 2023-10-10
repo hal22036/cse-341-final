@@ -60,13 +60,51 @@
         }
       },
       "post": {
+        "tags": [
+          "breakfast"
+        ],
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "breakfast_type": {
+                  "example": "any"
+                },
+                "item_1": {
+                  "example": "any"
+                },
+                "item_2": {
+                  "example": "any"
+                },
+                "item_3": {
+                  "example": "any"
+                },
+                "item_4": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
           "401": {
             "description": "Unauthorized"
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -98,6 +136,9 @@
         }
       },
       "put": {
+        "tags": [
+          "breakfast"
+        ],
         "description": "",
         "parameters": [
           {
@@ -105,18 +146,57 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "breakfast_type": {
+                  "example": "any"
+                },
+                "item_1": {
+                  "example": "any"
+                },
+                "item_2": {
+                  "example": "any"
+                },
+                "item_3": {
+                  "example": "any"
+                },
+                "item_4": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "delete": {
+        "tags": [
+          "breakfast"
+        ],
         "description": "",
         "parameters": [
           {
@@ -127,8 +207,17 @@
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -152,13 +241,51 @@
         }
       },
       "post": {
+        "tags": [
+          "lunch"
+        ],
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lunch_type": {
+                  "example": "any"
+                },
+                "item_1": {
+                  "example": "any"
+                },
+                "item_2": {
+                  "example": "any"
+                },
+                "item_3": {
+                  "example": "any"
+                },
+                "item_4": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
           "401": {
             "description": "Unauthorized"
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -190,6 +317,9 @@
         }
       },
       "put": {
+        "tags": [
+          "lunch"
+        ],
         "description": "",
         "parameters": [
           {
@@ -197,18 +327,57 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lunch_type": {
+                  "example": "any"
+                },
+                "item_1": {
+                  "example": "any"
+                },
+                "item_2": {
+                  "example": "any"
+                },
+                "item_3": {
+                  "example": "any"
+                },
+                "item_4": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "delete": {
+        "tags": [
+          "lunch"
+        ],
         "description": "",
         "parameters": [
           {
@@ -219,44 +388,98 @@
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
     },
     "/dinner/": {
       "get": {
+        "tags": [
+          "dinner"
+        ],
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
       "post": {
+        "tags": [
+          "dinner"
+        ],
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dinner_type": {
+                  "example": "any"
+                },
+                "item_1": {
+                  "example": "any"
+                },
+                "item_2": {
+                  "example": "any"
+                },
+                "item_3": {
+                  "example": "any"
+                },
+                "item_4": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
           "401": {
             "description": "Unauthorized"
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
     },
     "/dinner/{id}": {
       "get": {
+        "tags": [
+          "dinner"
+        ],
         "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      },
-      "put": {
-        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -266,15 +489,76 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "dinner"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dinner_type": {
+                  "example": "any"
+                },
+                "item_1": {
+                  "example": "any"
+                },
+                "item_2": {
+                  "example": "any"
+                },
+                "item_3": {
+                  "example": "any"
+                },
+                "item_4": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "delete": {
+        "tags": [
+          "dinner"
+        ],
         "description": "",
         "parameters": [
           {
@@ -285,8 +569,17 @@
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -310,13 +603,57 @@
         }
       },
       "post": {
+        "tags": [
+          "dessert"
+        ],
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dessert_type": {
+                  "example": "any"
+                },
+                "item_1": {
+                  "example": "any"
+                },
+                "item_2": {
+                  "example": "any"
+                },
+                "item_3": {
+                  "example": "any"
+                },
+                "item_4": {
+                  "example": "any"
+                },
+                "item_5": {
+                  "example": "any"
+                },
+                "item_6": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
           "401": {
             "description": "Unauthorized"
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -348,6 +685,9 @@
         }
       },
       "put": {
+        "tags": [
+          "dessert"
+        ],
         "description": "",
         "parameters": [
           {
@@ -355,18 +695,63 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dessert_type": {
+                  "example": "any"
+                },
+                "item_1": {
+                  "example": "any"
+                },
+                "item_2": {
+                  "example": "any"
+                },
+                "item_3": {
+                  "example": "any"
+                },
+                "item_4": {
+                  "example": "any"
+                },
+                "item_5": {
+                  "example": "any"
+                },
+                "item_6": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "delete": {
+        "tags": [
+          "dessert"
+        ],
         "description": "",
         "parameters": [
           {
@@ -377,8 +762,17 @@
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
