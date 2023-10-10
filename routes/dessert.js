@@ -8,10 +8,10 @@ const auth = require('../middleware/authenticate.js');
 router.get('/', dessertController.getAll);
 router.get('/:id', dessertController.getSingle);
 
-// router.post('/', auth.isAuthenticated, validation.saveDessert, dessertController.createDessert);
+router.post('/', auth.isAuthenticated, validation.saveDessert, dessertController.createDessert);
 
-// router.put('/:id', auth.isAuthenticated, validation.saveDessert, dessertController.updateDessert);
+router.put('/:id', auth.isAuthenticated, validation.saveDessert, dessertController.updateDessert);
 
-// router.delete('/:id', auth.isAuthenticated, dessertController.deleteDessert);
+router.delete('/:id', auth.isAuthenticated, dessertController.deleteDessert);
 
 module.exports = router;
