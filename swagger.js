@@ -5,7 +5,7 @@ const doc = {
         title: 'Meal Ideas Api',
         description: 'Meal Ideas Api'
     },
-    host: 'https://cse-341-final.onrender.com',
+    host: 'cse-341-final.onrender.com',
     schemes: ['https']
 };
 
