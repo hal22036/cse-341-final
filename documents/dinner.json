@@ -1,7 +1,7 @@
 [
  
     {
-    "dinner_type": "Lasagna",
+    "main_dish": "Lasagna",
     "item_1": "Lasagna Noodles",
     "item_2": "16oz Ricotta Cheese",
     "item_3": "28oz Pasta Sauce",
@@ -9,7 +9,7 @@
     "category": "Italian"
   },
   {
-    "dinner_type": "Roast",
+    "main_dish": "Roast",
     "item_1": "3lb Pork Butt Roast",
     "item_2": "Carrots",
     "item_3": "Potatoes",
@@ -17,7 +17,7 @@
     "category": "American"
   },
   {
-    "dinner_type": "Tacos",
+    "main_dish": "Tacos",
     "item_1": "1lb Hamburger",
     "item_2": "Taco Seasoning",
     "item_3": "Tortillas",

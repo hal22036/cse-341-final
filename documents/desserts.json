@@ -1,7 +1,7 @@
 [
  
     {
-    "dessert_type": "Chocolate Chip Cookies",
+    "main_dish": "Chocolate Chip Cookies",
     "item_1": "1 cup Butter",
     "item_2": "2 cups Sugar",
     "item_3": "2 Eggs",
@@ -11,7 +11,7 @@
     "category": "American"
   },
   {
-    "dessert_type": "Frosted Banana Bars",
+    "main_dish": "Frosted Banana Bars",
     "item_1": "1 cup Butter",
     "item_2": "2 cups Sugar",
     "item_3": "2 Eggs",
@@ -21,7 +21,7 @@
     "category": "American"
   },
   {
-    "dessert_type": "Texas Sheet Cake",
+    "main_dish": "Texas Sheet Cake",
     "item_1": "1 cup Butter",
     "item_2": "2 cups Sugar",
     "item_3": "2 Eggs",
