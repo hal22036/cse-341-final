@@ -1,6 +1,5 @@
 const { ObjectId } = require('mongodb');
 const mongodb = require('../data/database');
-const objectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
     //#swagger.tags=['breakfast']
@@ -35,7 +34,7 @@ const getAll = async (req, res) => {
   const createBreakfast = async (req, res) => {
     //#swagger.tags=['breakfast']
     const breakfast = {
-      breakfast_type: req.body.breakfast_type,
+      main_dish: req.body.main_dish,
       item_1: req.body.item_1,
       item_2: req.body.item_2,
       item_3: req.body.item_3,
@@ -45,9 +44,9 @@ const getAll = async (req, res) => {
     const response = await mongodb.getDatabase().db().collection('breakfast').insertOne(breakfast);
     try {
       response.acknowledged;
-      res.status(204).send();
+      res.status(200).json(breakfast);
     } catch {
-      res.status(500).json(response.error || 'Some error occured while updating the breakfast.');
+      res.status(500).json(response.error || 'Some error occured while creating the breakfast.');
     }
   };
   
@@ -58,7 +57,7 @@ const getAll = async (req, res) => {
     }
     const breakfastId = new ObjectId(req.params.id);
     const breakfast = {
-      breakfast_type: req.body.breakfast_type,
+      main_dish: req.body.main_dish,
       item_1: req.body.item_1,
       item_2: req.body.item_2,
       item_3: req.body.item_3,
@@ -72,7 +71,7 @@ const getAll = async (req, res) => {
       .replaceOne({ _id: breakfastId }, breakfast);
     try {
       response.modifiedCount;
-      res.status(204).send();
+      res.status(200).json(breakfast);
     } catch {
       res.status(500).json(response.error || 'Some error occured while updating the breakfast.');
     }
@@ -91,7 +90,7 @@ const getAll = async (req, res) => {
       .deleteOne({ _id: breakfastId });
     try {
       response.deleteCount > 0;
-      res.status(204).send();
+      res.status(200).json({"message": `Breakfast with id ${breakfastId} was succesfully deleted.`});
     } catch {
       res.status(500).json(response.error || 'Some error occured while deleting the breakfast.');
     }

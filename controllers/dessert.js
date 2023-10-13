@@ -1,6 +1,5 @@
 const { ObjectId } = require('mongodb');
 const mongodb = require('../data/database');
-const objectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
     //#swagger.tags=['dessert']
@@ -35,7 +34,7 @@ const getAll = async (req, res) => {
   const createDessert = async (req, res) => {
     //#swagger.tags=['dessert']
     const dessert = {
-      dessert_type: req.body.dessert_type,
+      main_dish: req.body.main_dish,
       item_1: req.body.item_1,
       item_2: req.body.item_2,
       item_3: req.body.item_3,
@@ -47,9 +46,9 @@ const getAll = async (req, res) => {
     const response = await mongodb.getDatabase().db().collection('dessert').insertOne(dessert);
     try {
       response.acknowledged;
-      res.status(204).send();
+      res.status(200).json(dessert);
     } catch {
-      res.status(500).json(response.error || 'Some error occured while updating the dessert.');
+      res.status(500).json(response.error || 'Some error occured while creating the dessert.');
     }
   };
   
@@ -60,7 +59,7 @@ const getAll = async (req, res) => {
     }
     const dessertId = new ObjectId(req.params.id);
     const dessert = {
-      dessert_type: req.body.dessert_type,
+      main_dish: req.body.main_dish,
       item_1: req.body.item_1,
       item_2: req.body.item_2,
       item_3: req.body.item_3,
@@ -76,7 +75,7 @@ const getAll = async (req, res) => {
       .replaceOne({ _id: dessertId }, dessert);
     try {
       response.modifiedCount;
-      res.status(204).send();
+      res.status(200).json(dessert);
     } catch {
       res.status(500).json(response.error || 'Some error occured while updating the dessert.');
     }
@@ -95,7 +94,7 @@ const getAll = async (req, res) => {
       .deleteOne({ _id: dessertId });
     try {
       response.deleteCount > 0;
-      res.status(204).send();
+      res.status(200).json({"message": `Dessert with id ${dessertId} was succesfully deleted.`});
     } catch {
       res.status(500).json(response.error || 'Some error occured while deleting the dessert.');
     }
