@@ -5,14 +5,17 @@
     "description": "Meal Ideas Api",
     "version": "1.0.0"
   },
-  "host": "cse-341-final.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/login": {
       "get": {
+        "tags": [
+          "Authorization"
+        ],
         "description": "",
         "responses": {
           "default": {
@@ -23,6 +26,9 @@
     },
     "/logout": {
       "get": {
+        "tags": [
+          "Authorization"
+        ],
         "description": "",
         "responses": {
           "default": {
@@ -33,6 +39,9 @@
     },
     "/api-docs": {
       "get": {
+        "tags": [
+          "Documentation"
+        ],
         "description": "",
         "responses": {
           "default": {
@@ -44,7 +53,7 @@
     "/breakfast/": {
       "get": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "produces": [
@@ -61,7 +70,7 @@
       },
       "post": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "parameters": [
@@ -106,7 +115,7 @@
     "/breakfast/{id}": {
       "get": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "produces": [
@@ -131,7 +140,7 @@
       },
       "put": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "parameters": [
@@ -183,7 +192,7 @@
       },
       "delete": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "parameters": [
@@ -210,7 +219,7 @@
     "/lunch/": {
       "get": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "produces": [
@@ -227,7 +236,7 @@
       },
       "post": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "parameters": [
@@ -272,7 +281,7 @@
     "/lunch/{id}": {
       "get": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "produces": [
@@ -297,7 +306,7 @@
       },
       "put": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "parameters": [
@@ -349,7 +358,7 @@
       },
       "delete": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "parameters": [
@@ -376,7 +385,7 @@
     "/dinner/": {
       "get": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "produces": [
@@ -393,7 +402,7 @@
       },
       "post": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "parameters": [
@@ -438,7 +447,7 @@
     "/dinner/{id}": {
       "get": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "produces": [
@@ -463,7 +472,7 @@
       },
       "put": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "parameters": [
@@ -515,7 +524,7 @@
       },
       "delete": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "parameters": [
@@ -542,7 +551,7 @@
     "/dessert/": {
       "get": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "produces": [
@@ -559,7 +568,7 @@
       },
       "post": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "parameters": [
@@ -610,7 +619,7 @@
     "/dessert/{id}": {
       "get": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "produces": [
@@ -635,7 +644,7 @@
       },
       "put": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "parameters": [
@@ -693,7 +702,7 @@
       },
       "delete": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "parameters": [
@@ -713,6 +722,27 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/shared/random/{collection}": {
+      "get": {
+        "tags": [
+          "Random Meal"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "collection",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
