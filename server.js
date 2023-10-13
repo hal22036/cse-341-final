@@ -9,7 +9,10 @@ const cors = require('cors');
 
 const port = process.env.PORT || 3000;
 
-app
+app.use(cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"]
+  }))
  .use(bodyParser.json())
  .use(session({
     secret: "secret", //uses a cookie. In production, should use a random number.
@@ -29,9 +32,7 @@ app
     );
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
-    })
- .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}))
- .use(cors({ origin: '*'}))    
+    })   
  .use('/', require('./routes/index.js'));
 
 //  passport.use(new GitHubStrategy({

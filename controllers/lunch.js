@@ -35,7 +35,7 @@ const getAll = async (req, res) => {
   const createLunch = async (req, res) => {
     //#swagger.tags=['lunch']
     const lunch = {
-      lunch_type: req.body.lunch_type,
+      main_dish: req.body.main_dish,
       item_1: req.body.item_1,
       item_2: req.body.item_2,
       item_3: req.body.item_3,
@@ -45,9 +45,9 @@ const getAll = async (req, res) => {
     const response = await mongodb.getDatabase().db().collection('lunch').insertOne(lunch);
     try {
       response.acknowledged;
-      res.status(204).send();
+      res.status(200).json(lunch);
     } catch {
-      res.status(500).json(response.error || 'Some error occured while updating the lunch.');
+      res.status(500).json(response.error || 'Some error occured while creating the lunch.');
     }
   };
   
@@ -58,7 +58,7 @@ const getAll = async (req, res) => {
     }
     const lunchId = new ObjectId(req.params.id);
     const lunch = {
-      lunch_type: req.body.lunch_type,
+      main_dish: req.body.main_dish,
       item_1: req.body.item_1,
       item_2: req.body.item_2,
       item_3: req.body.item_3,
@@ -72,7 +72,7 @@ const getAll = async (req, res) => {
       .replaceOne({ _id: lunchId }, lunch);
     try {
       response.modifiedCount;
-      res.status(204).send();
+      res.status(200).json(lunch);
     } catch {
       res.status(500).json(response.error || 'Some error occured while updating the lunch.');
     }
@@ -91,7 +91,7 @@ const getAll = async (req, res) => {
       .deleteOne({ _id: lunchId });
     try {
       response.deleteCount > 0;
-      res.status(204).send();
+      res.status(200).json({"message": `Lunch with id ${lunchId} was succesfully deleted.`});
     } catch {
       res.status(500).json(response.error || 'Some error occured while deleting the lunch.');
     }

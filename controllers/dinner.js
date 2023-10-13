@@ -1,6 +1,5 @@
 const { ObjectId } = require('mongodb');
 const mongodb = require('../data/database');
-const objectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
     //#swagger.tags=['dinner']
@@ -35,7 +34,7 @@ const getAll = async (req, res) => {
   const createDinner = async (req, res) => {
     //#swagger.tags=['dinner']
     const dinner = {
-      dinner_type: req.body.dinner_type,
+      main_dish: req.body.main_dish,
       item_1: req.body.item_1,
       item_2: req.body.item_2,
       item_3: req.body.item_3,
@@ -45,9 +44,9 @@ const getAll = async (req, res) => {
     const response = await mongodb.getDatabase().db().collection('dinner').insertOne(dinner);
     try {
       response.acknowledged;
-      res.status(204).send();
+      res.status(200).json(dinner);
     } catch {
-      res.status(500).json(response.error || 'Some error occured while updating the dinner.');
+      res.status(500).json(response.error || 'Some error occured while creating the dinner.');
     }
   };
   
@@ -58,7 +57,7 @@ const getAll = async (req, res) => {
     }
     const dinnerId = new ObjectId(req.params.id);
     const dinner = {
-      dinner_type: req.body.dinner_type,
+      main_dish: req.body.main_dish,
       item_1: req.body.item_1,
       item_2: req.body.item_2,
       item_3: req.body.item_3,
@@ -72,7 +71,7 @@ const getAll = async (req, res) => {
       .replaceOne({ _id: dinnerId }, dinner);
     try {
       response.modifiedCount;
-      res.status(204).send();
+      res.status(200).json(dinner);
     } catch {
       res.status(500).json(response.error || 'Some error occured while updating the dinner.');
     }
@@ -91,7 +90,7 @@ const getAll = async (req, res) => {
       .deleteOne({ _id: dinnerId });
     try {
       response.deleteCount > 0;
-      res.status(204).send();
+      res.status(200).json({"message": `Dinner with id ${dinnerId} was succesfully deleted.`});
     } catch {
       res.status(500).json(response.error || 'Some error occured while deleting the dinner.');
     }
