@@ -5,10 +5,10 @@
     "description": "Meal Ideas Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse-341-final.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/login": {
@@ -732,6 +732,9 @@
           "Random Meal"
         ],
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "collection",
@@ -743,6 +746,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
