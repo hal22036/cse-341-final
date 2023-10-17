@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "nodemon": "nodemon server.js"
+    "nodemon": "nodemon server.js",
+    "j-test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -49,5 +50,9 @@
       "name": "JoJo Johnson",
       "email": "joh20123@byui.edu"
     }
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
 }
