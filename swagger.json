@@ -13,6 +13,9 @@
   "paths": {
     "/login": {
       "get": {
+        "tags": [
+          "Authorization"
+        ],
         "description": "",
         "responses": {
           "default": {
@@ -23,6 +26,9 @@
     },
     "/logout": {
       "get": {
+        "tags": [
+          "Authorization"
+        ],
         "description": "",
         "responses": {
           "default": {
@@ -33,6 +39,9 @@
     },
     "/api-docs": {
       "get": {
+        "tags": [
+          "Documentation"
+        ],
         "description": "",
         "responses": {
           "default": {
@@ -44,7 +53,7 @@
     "/breakfast/": {
       "get": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "produces": [
@@ -61,7 +70,7 @@
       },
       "post": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "parameters": [
@@ -99,6 +108,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -109,7 +121,7 @@
     "/breakfast/{id}": {
       "get": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "produces": [
@@ -134,7 +146,7 @@
       },
       "put": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "parameters": [
@@ -179,6 +191,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -186,7 +201,7 @@
       },
       "delete": {
         "tags": [
-          "breakfast"
+          "Breakfast"
         ],
         "description": "",
         "parameters": [
@@ -203,6 +218,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -213,7 +231,7 @@
     "/lunch/": {
       "get": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "produces": [
@@ -230,7 +248,7 @@
       },
       "post": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "parameters": [
@@ -268,6 +286,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -278,7 +299,7 @@
     "/lunch/{id}": {
       "get": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "produces": [
@@ -303,7 +324,7 @@
       },
       "put": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "parameters": [
@@ -348,6 +369,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -355,7 +379,7 @@
       },
       "delete": {
         "tags": [
-          "lunch"
+          "Lunch"
         ],
         "description": "",
         "parameters": [
@@ -372,6 +396,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -382,7 +409,7 @@
     "/dinner/": {
       "get": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "produces": [
@@ -399,7 +426,7 @@
       },
       "post": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "parameters": [
@@ -437,6 +464,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -447,7 +477,7 @@
     "/dinner/{id}": {
       "get": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "produces": [
@@ -472,7 +502,7 @@
       },
       "put": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "parameters": [
@@ -517,6 +547,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -524,7 +557,7 @@
       },
       "delete": {
         "tags": [
-          "dinner"
+          "Dinner"
         ],
         "description": "",
         "parameters": [
@@ -542,6 +575,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -551,7 +587,7 @@
     "/dessert/": {
       "get": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "produces": [
@@ -568,7 +604,7 @@
       },
       "post": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "parameters": [
@@ -613,6 +649,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -622,7 +661,7 @@
     "/dessert/{id}": {
       "get": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "produces": [
@@ -647,7 +686,7 @@
       },
       "put": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "parameters": [
@@ -698,6 +737,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -705,7 +747,7 @@
       },
       "delete": {
         "tags": [
-          "dessert"
+          "Dessert"
         ],
         "description": "",
         "parameters": [
@@ -723,8 +765,38 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/shared/random/{collection}": {
+      "get": {
+        "tags": [
+          "Random Meal"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "collection",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
