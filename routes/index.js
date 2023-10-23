@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const passport = require('passport');
+const app = require('../expressApp');
+
 
 router.use('/', require('./swagger'));
 router.use('/breakfast', require('./breakfast'));
@@ -16,4 +18,4 @@ router.get('/logout', function(req, res, next) {
     });
 });
 
-module.exports = router;
+module.exports = router, app;
