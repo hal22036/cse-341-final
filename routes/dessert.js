@@ -8,10 +8,10 @@ const { validateDessert } = require("../middleware/isValid")
 router.get('/', dessertController.getAll);
 router.get('/:id', dessertController.getSingle);
 
-router.post('/', validateDessert, dessertController.createDessert);
+router.post('/', auth.isAuthenticated, validateDessert, dessertController.createDessert);
 
-router.put('/:id', validateDessert, dessertController.updateDessert);
+router.put('/:id', auth.isAuthenticated, validateDessert, dessertController.updateDessert);
 
-router.delete('/:id', dessertController.deleteDessert);
+router.delete('/:id', auth.isAuthenticated, dessertController.deleteDessert);
 
 module.exports = router;

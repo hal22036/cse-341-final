@@ -8,10 +8,10 @@ const { validateMenu }  = require("../middleware/isValid")
 router.get('/', lunchController.getAll);
 router.get('/:id', lunchController.getSingle);
 
-router.post('/', validateMenu, lunchController.createLunch);
+router.post('/', auth.isAuthenticated, validateMenu, lunchController.createLunch);
 
-router.put('/:id', validateMenu, lunchController.updateLunch);
+router.put('/:id', auth.isAuthenticated, validateMenu, lunchController.updateLunch);
 
-router.delete('/:id', lunchController.deleteLunch);
+router.delete('/:id', auth.isAuthenticated, lunchController.deleteLunch);
 
 module.exports = router;
