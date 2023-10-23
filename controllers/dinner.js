@@ -2,7 +2,7 @@ const { ObjectId } = require('mongodb');
 const mongodb = require('../data/database');
 
 const getAll = async (req, res) => {
-    //#swagger.tags=['dinner']
+    //#swagger.tags=['Dinner']
     const result = await mongodb.getDatabase().db().collection('dinner').find();
     result.toArray().then((dinner, err) => {
       try {
@@ -15,7 +15,7 @@ const getAll = async (req, res) => {
   };
   
   const getSingle = async (req, res) => {
-    //#swagger.tags=['dinner']
+    //#swagger.tags=['Dinner']
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid id to find a dinner item.');
     }
@@ -32,7 +32,7 @@ const getAll = async (req, res) => {
   };
 
   const createDinner = async (req, res) => {
-    //#swagger.tags=['dinner']
+    //#swagger.tags=['Dinner']
     const dinner = {
       main_dish: req.body.main_dish,
       item_1: req.body.item_1,
@@ -51,7 +51,7 @@ const getAll = async (req, res) => {
   };
   
   const updateDinner = async (req, res) => {
-    //#swagger.tags=['dinner']
+    //#swagger.tags=['Dinner']
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid contact id to update a dinner.');
     }
@@ -78,7 +78,7 @@ const getAll = async (req, res) => {
   };
   
   const deleteDinner = async (req, res) => {
-    //#swagger.tags=['dinner']
+    //#swagger.tags=['Dinner']
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid contact id to delete a dinner.');
     }
