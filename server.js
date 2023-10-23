@@ -76,4 +76,10 @@ mongodb.initDb((err) => {
     else {
         app.listen(port, () => { console.log(`Database is listening and node is running on port ${port}`)});
     }
-});
+// <<<<<<< jenih
+// })
+
+// module.exports = app;
+// =======
+// });
+// >>>>>>> main

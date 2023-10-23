@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const passport = require('passport');
+
+const app = require('../expressApp');
 const {addSwaggerTag} = require("../middleware/addSwaggerTag.js")
+
 
 router.use('/', require('./swagger'));
 router.use('/breakfast', require('./breakfast'));
@@ -18,4 +21,4 @@ router.get('/logout', addSwaggerTag, function(req, res, next) {
     });
 });
 
-module.exports = router;
+module.exports = router, app;
